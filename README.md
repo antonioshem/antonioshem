@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @antonioshem
-- 👀 I’m interested in matlab, python and C++
-- 🌱 I’m currently learning python and C++
-- 💞️ I’m looking to collaborate on topics related to Signals and Mobile communications
+- 👀 I’m interested in matlab, python and DevOps
+- 🌱 I’m currently learning python and DevOps
+- 💞️ I’m looking to collaborate on topics related to Signals and Mobile communications and DevOps
 - 📫 How to reach me -> antonioshem@gmail.com
 
 <!---
