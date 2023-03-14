@@ -1,0 +1,80 @@
+Class
+- Encapsulates data and functionality: data as attributes and functionality as methods.
+- It is a blueprint for creating concrete instances in memory.
+-Example:
+    class: Dog
+    attributes: name, state, color
+    methods: command (x), bark(freq)
+
+Instance
+- A concrete implementation of a class: all attributes of an instance have a fixed value. I am an instance
+of class human.
+-each instance has its own attributes independent of other instances.
+- all instance share the same class variable.
+
+Self
+-first argument when defining any method
+- it gives the Python interpreter the information about the concrete instance.
+- to define a method, use self to modify the instance attributes. But to call an instance method, you do not
+need to specify self.
+
+Example 1:
+
+class Dog:
+    """Blueprint of a dog"""
+    #class variable
+    #for all instances
+    species = ["canis lupus"]
+
+    def __init__(self, n, c):
+       self.name = n
+       self.state = "sleeping"
+       self.color = c
+
+    def command(self, x):
+       if x == self.name:
+           self.bark(2)
+       elif x == "sit":
+           self.state = "sit"
+       else:
+           self.state = "wag tail"
+
+    def bark(self, freq):
+        for i in range (freq):
+            print(self.name + ": woof!")
+
+    #define your dogs: alice - sleeping ang grey while bello - wag tail and black
+bello = Dog("bello", "black")
+alice = Dog("alice", "white")
+
+print(bello.color) #black
+print(alice.color) #white
+
+bello.bark(1) #bello: woof!
+
+alice.command("sit")
+print("alice: " + alice.state) #alice sit
+
+bello.command("no")
+print("bello: " + bello.state) #bello: wag tail
+
+alice.command("alice")
+#alice:woof!
+#alice:woof!
+
+bello.species += ["wulf"]
+print(len(bello.species)== len(alice.species))
+
+#true (!)
+
+Example 2:
+
+class Employee():
+    pass
+employee = Employee()
+employee.salary = 1220000
+employee.firstname = "alice"
+employee.lastname = "coder"
+
+print(employee.firstname + " "  + employee.lastname +  " $" + str(employee.salary))
+#alice code $ 1220000
